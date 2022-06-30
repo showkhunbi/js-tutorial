@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Calculator</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        background-color: rgba(255, 248, 220, 0.349);
+      }
+      .container {
+        border: 2px solid black;
+        margin: 10px auto;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      label {
+        font-size: 40px;
+        margin: 40px;
+        text-align: center;
+      }
+      .birthdayInput {
+        width: 300px;
+        height: 50px;
+        margin: 15px;
+        border-radius: 20px;
+        padding-left: 10px;
+        font-size: 20px;
+        padding-right: 10px;
+        border: 1px solid burlywood;
+      }
+      .btn {
+        margin: 20px;
+        font-size: 20px;
+        border-radius: 15px;
+        background-color: rgb(43, 185, 196);
+        padding: 10px 50px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <form action=""> -->
+    <div class="container">
+      <div><label for="birthdate">Enter your date of Birth</label></div>
+      <div class="input">
+        <input
+          type="date"
+          name="birthdate"
+          id="birthDate"
+          class="birthdayInput"
+        />
+      </div>
+      <button id="btn" class="btn" type="submit">submit</button>
+      <div id="results"></div>
+    </div>
+    <!-- </form> -->
+    <script src="./birthday calculator.js"></script>
+    <!-- <script src="/convert date to days code.js"></script> -->
+  </body>
+</html>

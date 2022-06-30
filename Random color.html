@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Color Generator</title>
+    <style>
+      #body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      #h1 {
+        font-size: 40px;
+      }
+      #btn {
+        font-size: 25px;
+        padding: 10px;
+        color: rgba(225, 225, 225, 0.5);
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <h1 id="h1">THIS IS HEX COLOR <span id="span"></span></h1>
+    <button id="btn">Button</button>
+    <script>
+      let color = "#";
+      let colors = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
+
+      let btn = document.getElementById("btn");
+
+      function setcolor() {
+        color = "#";
+        for (let i = 0; i < 6; i++) {
+          let random = Math.floor(Math.random() * colors.length);
+          let value = colors[random];
+          color += value;
+          console.log(color);
+        }
+        document.getElementById("body").style.backgroundColor = color;
+        document.getElementById("span").innerHTML = color;
+      }
+      btn.addEventListener("click", setcolor);
+      //setInterval(setcolor, 3000);
+    </script>
+  </body>
+</html>
